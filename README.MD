@@ -18,3 +18,16 @@ app.get("/", (req, res) => {
     res.send('Hello Express');
 });
 ```
+
+### Bonus - Listen
+
+​	Servidor escutando as requisições:
+
+```javascript
+const port = 5000;
+
+app.listen(port, (req, res) => {
+    console.log(`Servidor escutando a porta ${port}`);
+});
+```
+
