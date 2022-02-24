@@ -12,6 +12,11 @@ app.get("/", (req, res) => {
     res.send('Hello Express');
 });
 
+// Aula 3 - Caminho para arquivo HTML
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/views/index.html');
+});
+
 app.listen(port, (req, res) => {
     console.log(`Servidor escutando a porta ${port}`);
 });
