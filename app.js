@@ -7,10 +7,10 @@ const port = 5000;
 // Aula 1 - Console Node.Js
 console.log('Hello World');
 
-// Aula 2 - Respondendo String
+/* Aula 2 - Respondendo String
 app.get("/", (req, res) => {
     res.send('Hello Express');
-});
+}); */
 
 // Aula 3 - Caminho para arquivo HTML
 app.get('/', (req, res) => {
