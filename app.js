@@ -17,6 +17,10 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/views/index.html');
 });
 
+
+// Aula 4 - Middleware para arquivos estáticos
+app.use('/public', express.static(__dirname + '/public'));
+
 app.listen(port, (req, res) => {
     console.log(`Servidor escutando a porta ${port}`);
 });

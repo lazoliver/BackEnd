@@ -36,7 +36,17 @@ app.listen(port, (req, res) => {
 
 ​	Vamos utilizar o sendFile para direcionar as requisiçoes a API para um arquivo, neste caso extensão HTML:
 
+```javascript
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/views/index.html');
+});
 ```
 
+### Aula 4 - Middleware para arquivos estáticos
+
+​	Chegou a vez de criarmos um middleware para servir recurso para nosso html:
+
+```javascript
+app.use('/public', express.static(__dirname + '/public'));
 ```
 
