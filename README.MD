@@ -24,10 +24,19 @@ app.get("/", (req, res) => {
 ​	Servidor escutando as requisições:
 
 ```javascript
+// Definindo a porta do servidor
 const port = 5000;
 
 app.listen(port, (req, res) => {
     console.log(`Servidor escutando a porta ${port}`);
 });
+```
+
+### Aula 3 - Caminho para arquivo HTML
+
+​	Vamos utilizar o sendFile para direcionar as requisiçoes a API para um arquivo, neste caso extensão HTML:
+
+```
+
 ```
 
