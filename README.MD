@@ -50,3 +50,15 @@ app.get('/', (req, res) => {
 app.use('/public', express.static(__dirname + '/public'));
 ```
 
+### Aula 5 - Respondendo JSON
+
+​	O próximo é responder um JSON: 
+
+```javascript
+app.get('/json', (req, res) => {
+    res.json({
+      "message": "Hello json"
+    });
+});
+```
+
