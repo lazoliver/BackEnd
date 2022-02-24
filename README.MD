@@ -62,3 +62,17 @@ app.get('/json', (req, res) => {
 });
 ```
 
+### Aula 6 - Usar .env
+
+​	Vamos definir variáveis de ambiente para posteriormente utilizar: 
+
+```javascript
+app.get('/json', (req, res) => {
+    if(process.env.MESSAGE_STYLE === 'uppercase') {
+        res.json("hello json".toLocaleUpperCase());
+    } else {
+        res.json({"message": "Hello json"});
+    }
+});
+```
+
