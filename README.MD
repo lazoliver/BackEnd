@@ -122,3 +122,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 ```
 
+### Aula 11 - Obter dados de solicitações POST
+
+```javascript
+app.post('/name', (req, res) => {
+    var string = req.body.first + ' ' + req.body.last;
+    res.json({ name: string });
+});
+```
+

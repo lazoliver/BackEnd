@@ -76,6 +76,12 @@ app.get('/name', (req, res) => {
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+// Aula 11 - Obter dados de solicitações POST
+app.post('/name', (req, res) => {
+    var string = req.body.first + ' ' + req.body.last;
+    res.json({ name: string });
+});
+
 app.listen(port, (req, res) => {
     console.log(`Servidor escutando a porta ${port}`);
 });
