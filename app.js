@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 require('dotenv').config();
+var bodyParser = require('body-parser');
 
 // Definindo a porta do servidor
 const port = 5000;
@@ -70,6 +71,10 @@ app.get('/name', (req, res) => {
         name: `${firstName} ${lastName}`
     });
 });
+
+// Aula 10 - Body-Parser
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 app.listen(port, (req, res) => {
     console.log(`Servidor escutando a porta ${port}`);

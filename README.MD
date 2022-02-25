@@ -115,3 +115,10 @@ app.get('/name', (req, res) => {
 });
 ```
 
+### Aula 10 - Body-Parser
+
+```javascript
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+```
+
