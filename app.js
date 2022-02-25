@@ -47,6 +47,20 @@ app.get('/json', (req, res) => {
     }
 });
 
+// Aula 8 - Middleware com tempo do servidor
+app.get(
+    '/now', 
+    (req, res, next) => {
+      req.time = new Date().toString();
+      next();
+    }, 
+    (req, res) => {
+      res.send({
+        time: req.time
+      });  
+    }
+);
+
 app.listen(port, (req, res) => {
     console.log(`Servidor escutando a porta ${port}`);
 });

@@ -85,3 +85,20 @@ app.use((req, res, next) => {
 });
 ```
 
+### Aula 8 - Middleware com tempo do servidor
+
+```javascript
+app.get(
+  '/now', 
+  (req, res, next) => {
+    req.time = new Date().toString();
+    next();
+  }, 
+  (req, res) => {
+    res.send({
+      time: req.time
+    });  
+  }
+);
+```
+
