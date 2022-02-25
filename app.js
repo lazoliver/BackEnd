@@ -5,6 +5,12 @@ require('dotenv').config();
 // Definindo a porta do servidor
 const port = 5000;
 
+// Aula 7 - Middleware registrando (método, caminho e ip)
+app.use((req, res, next) => {
+    console.log(req.method + ' ' + req.path + ' - ' + req.ip);
+    next();
+});
+
 // Aula 1 - Console Node.Js
 console.log('Hello World');
 

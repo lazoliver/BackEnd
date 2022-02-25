@@ -76,3 +76,12 @@ app.get('/json', (req, res) => {
 });
 ```
 
+### Aula 7 - Middleware registrando (método, caminho e ip)
+
+```javascript
+app.use((req, res, next) => {
+    console.log(req.method + ' ' + req.path + ' - ' + req.ip);
+    next();
+});
+```
+
