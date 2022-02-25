@@ -63,9 +63,9 @@ app.get(
 
 // Aula 9 - Consultando Cliente
 app.get('/name', (req, res) => {
-    let firstName = req.query.first;
-    let lastName = req.query.last;
-    let { first: firstName, last: lastName } = req.query;
+    var firstName = req.query.first;
+    var lastName = req.query.last;
+    var { first: firstName, last: lastName } = req.query;
     res.json({
         name: `${firstName} ${lastName}`
     });
